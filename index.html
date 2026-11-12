@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENTA SHOP — Buzo Náutica Algodón Polar Mujer</title>
+  <meta name="description" content="Buso premium de algodón polar. Pagos contra entrega. Envío gratis a todo el país. Menta Shop, Pasto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+</head>
+<body>
+  <!-- Promo Banner -->
+  <div class="promo-banner">
+    <div class="promo-banner-inner">
+      <span class="promo-badge">OFERTA</span>
+      <span class="promo-text">Compra 2 o más busos y paga solo <strong>$139.000</strong> c/u</span>
+      <span class="promo-sub">Envío gratis a todo el país · Pago contra entrega</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo"><img src="img/logo.jpg" alt="Menta Shop" width="36" height="36" class="logo-img"> MENTA</a>
+      <nav class="nav">
+        <a href="#producto">Producto</a>
+        <a href="#pedido">Pedido</a>
+        <a href="#galeria">Galería</a>
+        <a href="#detalles">Detalles</a>
+      </nav>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#producto">Producto</a>
+      <a href="#pedido">Pedido</a>
+      <a href="#galeria">Galería</a>
+      <a href="#detalles">Detalles</a>
+    </div>
+  </header>
+
+  <!-- Hero / Product -->
+  <main id="producto">
+    <section class="product-section">
+      <div class="product-gallery">
+        <div class="gallery-main">
+          <img id="mainImage" src="img/rojo-intenso.jpg" alt="Buzo Náutica Algodón Polar Mujer" loading="eager" class="cinematic-img">
+          <div class="gallery-badge">-13%</div>
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs"></div>
+      </div>
+
+      <div class="product-info">
+        <p class="product-category">MENTA STORE ®</p>
+        <h1 class="product-title">Buzo Náutica Algodón Polar Mujer</h1>
+        <div class="product-price">
+          <span class="price-current" id="priceDisplay">$159.900</span>
+          <span class="price-note">COP</span>
+        </div>
+        <div class="shipping-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span>ENVÍO GRATIS A COLOMBIA</span>
+        </div>
+        <p class="product-desc">
+          Descubre el equilibrio perfecto entre estilo, comodidad y abrigo con nuestros 
+          buzos Náutica en algodón polar para mujer. Confeccionados en tela de alta 
+          calidad, ofrecen una textura suave, cálida y resistente, ideal para los días 
+          fríos sin perder un look moderno y versátil. Su diseño se adapta fácilmente a 
+          cualquier ocasión, desde un outfit casual hasta un estilo deportivo. Disponibles 
+          en diferentes tallas y colores, son la prenda perfecta para renovar tu clóset 
+          con calidad premium. Envío gratis a todo Colombia y pago contra entrega para que 
+          compres con total confianza. ¡Pide el tuyo antes de que se agoten!
+        </p>
+
+        <!-- Color selector -->
+        <div class="selector-group">
+          <label class="selector-label">Color: <span id="colorName">Rojo Intenso</span></label>
+          <div class="color-options" id="colorOptions"></div>
+        </div>
+
+        <!-- Size selector -->
+        <div class="selector-group">
+          <label class="selector-label">Talla</label>
+          <div class="size-options" id="sizeOptions">
+            <button class="size-btn" data-size="S">S</button>
+            <button class="size-btn" data-size="M">M</button>
+            <button class="size-btn active" data-size="L">L</button>
+            <button class="size-btn" data-size="XL">XL</button>
+          </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="selector-group">
+          <label class="selector-label">Cantidad</label>
+          <div class="qty-control">
+            <button type="button" class="qty-btn" id="qtyMinus">−</button>
+            <input type="number" id="qtyInput" value="1" min="1" max="10" readonly>
+            <button type="button" class="qty-btn" id="qtyPlus">+</button>
+          </div>
+          <p class="qty-hint" id="qtyHint">Compra 2 o más y paga $139.000 c/u</p>
+        </div>
+
+        <!-- Shipping info -->
+        <div class="shipping-info">
+          <div class="shipping-item shipping-highlight">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <div>
+              <strong>Envío GRATIS a todo Colombia</strong>
+              <span>Sin costos ocultos · Entrega rápida</span>
+            </div>
+          </div>
+          <div class="shipping-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            <span>Pago contra entrega</span>
+          </div>
+          <div class="shipping-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <span>Compra 100% segura</span>
+          </div>
+        </div>
+
+        <!-- Order CTA -->
+        <div class="cta-group">
+          <a href="#pedido" class="btn btn-primary btn-block" id="orderBtn">Hacer pedido</a>
+          <button type="button" class="btn btn-outline btn-block" id="creditBtn">
+            <img src="img/addi-logo.png" alt="Addi" class="btn-addi-logo">
+            Solicitar crédito con Addi
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Form (moved above collection) -->
+    <section class="order-section" id="pedido">
+      <div class="wrap">
+        <h2 class="section-title">Completa tu pedido</h2>
+        <p class="section-sub">Pagos contra entrega. Envío gratis a todo el país.</p>
+
+        <div class="order-grid">
+          <div class="order-summary-card">
+            <h3>Resumen del pedido</h3>
+            <div class="summary-line">
+              <span>Buzo Náutica Algodón Polar Mujer</span>
+              <span id="summaryColor">Rojo Intenso</span>
+            </div>
+            <div class="summary-line">
+              <span>Talla</span>
+              <span id="summarySize">L</span>
+            </div>
+            <div class="summary-line">
+              <span>Cantidad</span>
+              <span id="summaryQty">1</span>
+            </div>
+            <div class="summary-line">
+              <span>Precio unitario</span>
+              <span id="summaryUnitPrice">$159.900</span>
+            </div>
+            <div class="summary-total">
+              <span>Total</span>
+              <span id="summaryTotal">$159.900</span>
+            </div>
+            <div class="summary-shipping-free">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <span>Envío GRATIS a todo Colombia</span>
+            </div>
+          </div>
+
+          <form class="order-form" id="orderForm" novalidate>
+            <div class="form-group">
+              <label for="oName">Nombre completo</label>
+              <input type="text" id="oName" name="name" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="form-group">
+              <label for="oPhone">Teléfono (WhatsApp)</label>
+              <input type="tel" id="oPhone" name="phone" placeholder="300 000 0000" required>
+            </div>
+            <div class="form-group">
+              <label for="oEmail">Correo electrónico (opcional)</label>
+              <input type="email" id="oEmail" name="email" placeholder="tu@correo.com">
+            </div>
+            <div class="form-group">
+              <label for="oAddress">Dirección (nomenclatura)</label>
+              <input type="text" id="oAddress" name="address" placeholder="Cra 10 # 20-30" required>
+            </div>
+            <div class="form-group">
+              <label for="oAddressExtra">Información adicional (apto, casa, oficina)</label>
+              <input type="text" id="oAddressExtra" name="addressExtra" placeholder="Apto 201, Torre B">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="oCity">Ciudad</label>
+                <input type="text" id="oCity" name="city" placeholder="Bogotá" required>
+              </div>
+              <div class="form-group">
+                <label for="oDept">Departamento</label>
+                <input type="text" id="oDept" name="dept" placeholder="Cundinamarca" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="oNotes">Notas del pedido (opcional)</label>
+              <textarea id="oNotes" name="notes" rows="3" placeholder="Indicaciones especiales..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitOrder">Hacer pedido</button>
+            <p class="form-note">Al enviar, se confirma tu pedido y se abre WhatsApp con los detalles. La guía de envío se envía automáticamente por la plataforma de Mastershop.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Auto-sliding Gallery: Hoodies & Models -->
+    <section class="carousel-section" id="galeria">
+      <div class="wrap">
+        <h2 class="section-title">Nuestra colección</h2>
+        <p class="section-sub">Busos y modelos que se presentan solos</p>
+        <div class="auto-carousel" id="hoodieCarousel">
+          <div class="carousel-track" id="carouselTrack"></div>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="details-section" id="detalles">
+      <div class="wrap">
+        <h2 class="section-title">Detalles del producto</h2>
+        <div class="details-grid">
+          <div class="detail-item">
+            <h3>Material</h3>
+            <p>Algodón polar de alta calidad. Tela suave, cálida y resistente.</p>
+          </div>
+          <div class="detail-item">
+            <h3>Corte</h3>
+            <p>Oversize / Relaxed fit. Diseño unisex.</p>
+          </div>
+          <div class="detail-item">
+            <h3>Cuidado</h3>
+            <p>Lavar a mano o en máquina ciclo suave. No usar secadora.</p>
+          </div>
+          <div class="detail-item">
+            <h3>Tallas</h3>
+            <p>S, M, L, XL. Consulta la guía de tallas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Shipping Highlights -->
+    <section class="shipping-proof-section">
+      <div class="wrap">
+        <h2 class="section-title">Envíos reales</h2>
+        <p class="section-sub">Clientes que ya recibieron su pedido</p>
+        <div class="ig-carousel" id="igCarousel">
+          <div class="ig-track" id="igTrack"></div>
+        </div>
+        <div class="ig-dots" id="igDots"></div>
+        <a href="https://www.instagram.com/menta1528/" target="_blank" rel="noopener" class="ig-link">Ver más en Instagram →</a>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews-section">
+      <div class="wrap">
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <div class="reviews-grid" id="reviewsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Trust / Security Section -->
+    <section class="trust-section">
+      <div class="wrap">
+        <h2 class="section-title">Seguridad y confiabilidad</h2>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <h3>Compra segura</h3>
+            <p>Tus datos están protegidos. No compartimos información personal.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>Envío gratis</h3>
+            <p>Envío gratis a todo el país. Sin costos ocultos.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+            <h3>Pago contra entrega</h3>
+            <p>Pagas cuando recibes. Sin riesgos, sin anticipos.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Soporte directo</h3>
+            <p>Atención personalizada por WhatsApp. Respondemos rápido.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Calidad garantizada</h3>
+            <p>Materiales premium. Confección de alta calidad.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Entrega rápida</h3>
+            <p>Recibe tu pedido en tiempo récord. Seguimiento en tiempo real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Credit Modal -->
+  <div class="modal-overlay" id="creditModal" hidden>
+    <div class="modal">
+      <button class="modal-close" id="creditClose" aria-label="Cerrar">&times;</button>
+      <div class="credit-header">
+        <img src="img/addi-logo.png" alt="Addi" class="addi-logo">
+        <h2>Solicitar crédito con Addi</h2>
+      </div>
+      <p class="modal-sub">El único crédito que manejamos. Completa tus datos y te contactamos para evaluar tu solicitud.</p>
+      <form id="creditForm">
+        <div class="form-group">
+          <label for="cName">Nombre completo</label>
+          <input type="text" id="cName" required>
+        </div>
+        <div class="form-group">
+          <label for="cPhone">Teléfono (WhatsApp)</label>
+          <input type="tel" id="cPhone" required>
+        </div>
+        <div class="form-group">
+          <label for="cEmail">Correo electrónico</label>
+          <input type="email" id="cEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="cCity">Ciudad</label>
+          <input type="text" id="cCity" required>
+        </div>
+        <div class="form-group">
+          <label for="cAmount">Monto solicitado</label>
+          <input type="text" id="cAmount" placeholder="$500.000" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-brand">
+        <img src="img/logo.jpg" alt="Menta Shop" width="48" height="48">
+        <div>
+          <p class="footer-brand-name">MENTA STORE ®</p>
+          <p>Pasto | Calle 18 # 30-44 Parque Infantil</p>
+          <p>Lun–Sáb | 9:00am - 1:00pm</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/menta1528/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/share/1DBDES3Ffi/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://wa.me/573118863168" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 MENTA STORE. Todos los derechos reservados.</p>
+      <p class="footer-copy">Pagos contra entrega. Envío gratis a todo el país.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

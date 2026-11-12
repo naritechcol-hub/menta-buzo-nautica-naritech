@@ -1,0 +1,19 @@
+# Screenshots
+*.png
+screenshot-*
+
+# Serve scripts
+_serve.js
+_screenshot.js
+
+# Vercel
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.log
+EOF
