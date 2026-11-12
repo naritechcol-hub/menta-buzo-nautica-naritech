@@ -192,13 +192,14 @@ orderForm.addEventListener('submit', (e) => {
   const name = document.getElementById('oName').value.trim();
   const phone = document.getElementById('oPhone').value.trim();
   const email = document.getElementById('oEmail').value.trim();
+  const doc = document.getElementById('oDoc').value.trim();
   const address = document.getElementById('oAddress').value.trim();
   const addressExtra = document.getElementById('oAddressExtra').value.trim();
   const city = document.getElementById('oCity').value.trim();
   const dept = document.getElementById('oDept').value.trim();
   const notes = document.getElementById('oNotes').value.trim();
 
-  if (!name || !phone || !address || !city || !dept) {
+  if (!name || !phone || !email || !doc || !address || !city || !dept) {
     alert('Por favor completa los campos obligatorios.');
     return;
   }
@@ -219,6 +220,7 @@ orderForm.addEventListener('submit', (e) => {
   msg += `Nombre: ${name}\n`;
   msg += `Teléfono: ${phone}\n`;
   if (email) msg += `Correo: ${email}\n`;
+  msg += `Documento: ${doc}\n`;
   msg += `Dirección: ${address}\n`;
   if (addressExtra) msg += `Info adicional: ${addressExtra}\n`;
   msg += `Ciudad: ${city}\n`;
